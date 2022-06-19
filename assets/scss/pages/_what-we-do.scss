@@ -1,0 +1,162 @@
+.read-more {
+  position: relative;
+  width: 100%;
+  &__div {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    &__image {
+      @include forPhoneOnly() {
+        height: 270px !important;
+        padding: 0 0 30px;
+      }
+      background-image: url(https://www.simbrella.com/site/templates/img/we_do_bg.jpg?v=2);
+      background-repeat: no-repeat;
+      background-position: 0% 50%;
+      background-size: cover;
+      padding-bottom: 70px;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-content: stretch;
+      align-items: stretch;
+      &__container {
+        z-index: 1;
+        @include containerStyle();
+        width: 100%;
+        &__h1 {
+          font-weight: bold;
+          font-size: 36px;
+          line-height: 1.29;
+          letter-spacing: 0.01em;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.read-more-1 {
+  &__article {
+    @include forPhoneOnly() {
+      padding: 40px 0;
+    }
+    padding: 100px 0;
+    background: #f6f8ff;
+    &__wrapper {
+      @include forPhoneOnly() {
+        display: block;
+      }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-content: stretch;
+      align-items: center;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+      &__image-side {
+        @include forPhoneOnly() {
+          width: 100%;
+        }
+        opacity: 1;
+        transform: translate(0, 0);
+        width: 430px;
+        padding: 40px 24px 60px;
+        border: 1px solid #fff;
+        background: #fff;
+        border-radius: 4px;
+        &__div {
+          width: 100%;
+          position: relative;
+          height: 230px;
+          text-align: center;
+        }
+        &__h3 {
+          padding: 0 0 16px;
+          font-size: 24px;
+          line-height: 1.25;
+          text-align: center;
+          letter-spacing: 0.01em;
+          color: #222;
+        }
+        &__p {
+          font-size: 16px;
+          line-height: 1.62;
+          text-align: center;
+          color: #5f6773;
+        }
+      }
+      &__container {
+        @include forPhoneOnly() {
+          width: 100%;
+          padding: 30px 0 0;
+        }
+        opacity: 1;
+        transform: translate(0, 0);
+        width: calc(100% - 600px);
+        &__div {
+          font-size: 20px;
+          line-height: 1.4;
+          color: #222;
+          &__ul {
+            list-style: none;
+            & li {
+              padding: 0 0 0 21px;
+              margin: 0 0 32px;
+              position: relative;
+            }
+            & li::before {
+              content: "";
+              display: block;
+              width: 8px;
+              height: 8px;
+              background: #ff931e;
+              position: absolute;
+              left: 0;
+              top: calc(50% - 4px);
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__section-2 {
+    position: relative;
+    width: 100%;
+    &__div {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.3);
+      height: 100%;
+      width: 100%;
+      &__image {
+        background-image: url(https://www.simbrella.com/site/templates/img/single_image.jpg?v=2);
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+        background-size: cover;
+        padding-bottom: 70px;
+        background-attachment: fixed;
+        height: 480px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-content: stretch;
+        align-items: stretch;
+      }
+    }
+  }
+}
+.dif {
+  min-height: 1px;
+  padding: 7px 0 7px;
+  background-image: none;
+  &__1 {
+    padding: 34px 0 34px;
+    background-image: none;
+  }
+}

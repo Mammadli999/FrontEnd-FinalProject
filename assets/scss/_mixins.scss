@@ -1,0 +1,25 @@
+@import "./variables";
+
+@mixin flexbox($alignItems: center, $justifyContent: center) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin containerStyle($max-width: $max-width-container) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin forTabletOnly() {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin forPhoneOnly() {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}

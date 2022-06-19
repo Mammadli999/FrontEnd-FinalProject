@@ -1,0 +1,30 @@
+{
+  "name": "scss",
+  "version": "0.0.1",
+  "description": "this is a demonstration for scss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss-prod": "node-sass ./assets/scss/main.scss ./assets/css/style.min.css --output-style=compressed",
+    "compile-scss-dev": "node-sass ./assets/scss/main.scss ./assets/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeacademyprogramming/P513-FE-SCSS.git"
+  },
+  "keywords": [
+    "scss",
+    "sass",
+    "fe",
+    "node.js"
+  ],
+  "author": "agilatakishiyev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeacademyprogramming/P513-FE-SCSS/issues"
+  },
+  "homepage": "https://github.com/codeacademyprogramming/P513-FE-SCSS#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

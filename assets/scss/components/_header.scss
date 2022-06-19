@@ -1,0 +1,201 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 110px;
+  transition: 0.4s;
+  // background-color: black;
+  &__container {
+    @include flexbox(center, space-between);
+    @include containerStyle();
+    height: 100%;
+    &__logo {
+      &__link {
+        display: inline-block;
+        width: 154px;
+        height: 53px;
+        &__image {
+          width: 100%;
+        }
+      }
+    }
+    &__nav {
+      &__list {
+        @include flexbox(center, space-between);
+        list-style: none;
+        &__list-item {
+          @include forTabletOnly {
+            display: none;
+          }
+          padding-left: 35px;
+          &__link {
+            font-style: inherit;
+            font-size: 17px;
+            text-decoration: none;
+            line-height: 1.41;
+            color: #eee;
+            padding: 8px 0;
+            transition: color 0.15s linear;
+          }
+          &__link:hover {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+    &__wrapper-btn {
+      display: none;
+      width: 46px;
+      height: 46px;
+      position: relative;
+      &__btn {
+        width: 50%;
+        height: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &__span {
+          display: block;
+          width: 22px;
+          height: 2px;
+          border: 1px solid #eee;
+          background-color: #eee;
+          position: relative;
+        }
+        &__span:not(:nth-child(3)) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+.active #line-1 {
+  animation: linear 0.4s top forwards;
+}
+
+.not-active #line-1 {
+  animation: linear 0.4s top-2 forwards;
+}
+
+.active #line-2 {
+  animation: linear 0.4s scaled forwards;
+}
+
+.not-active #line-2 {
+  animation: linear 0.4s scaled-2 forwards;
+}
+
+.active #line-3 {
+  animation: linear 0.4s bottom forwards;
+}
+
+.not-active #line-3 {
+  animation: linear 0.4s bottom-2 forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 7px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 7px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: 7px;
+    transform: rotate(135deg);
+  }
+  50% {
+    top: 7px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 7px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 7px;
+    transform: rotate(225deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 7px;
+    transform: rotate(225deg);
+  }
+  50% {
+    bottom: 7px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@include forTabletOnly() {
+  .header__container__nav {
+    display: none;
+  }
+  .header__container__wrapper-btn {
+    display: block;
+  }
+}
+
+@include forPhoneOnly() {
+  .header__container__nav {
+    display: none;
+  }
+  .header__container__wrapper-btn {
+    display: block;
+  }
+}
+
+.sticky {
+  color: black;
+  background-color: white;
+  height: 80px;
+  box-shadow: 0 0 10px 0;
+}

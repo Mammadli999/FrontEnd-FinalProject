@@ -1,0 +1,236 @@
+@import "../variables";
+@import "../mixins";
+.footer {
+  @include forPhoneOnly() {
+    padding: 20px 0 20px;
+  }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+  padding: 35px 0 25px;
+  min-height: calc(100vh - 80px);
+  background-color: #000;
+  background-image: url(https://www.simbrella.com/site/templates/img/footer_bg.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  &__section {
+    @include forPhoneOnly() {
+      display: block;
+    }
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    &__h2 {
+      @include forPhoneOnly() {
+        padding: 0 0 20px;
+        font-size: 27px;
+      }
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff;
+    }
+    &__div {
+      @include forPhoneOnly() {
+        width: 100%;
+      }
+      width: calc(100% - 360px);
+      &__header {
+        @include forPhoneOnly() {
+          display: block;
+          padding: 0 0 60px;
+        }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding: 0 0 50px;
+        &__nav {
+          @include forPhoneOnly() {
+            padding: 0 0 30px;
+          }
+          font-size: 0;
+          &__ul {
+            list-style: none;
+            &__li {
+              @include forPhoneOnly() {
+                padding: 0 20px;
+              }
+              display: inline-block;
+              padding: 0 48px;
+              border-left: 1px solid #505050;
+              &:first-child {
+                border-left: none;
+                padding-left: 0;
+              }
+              &__span {
+                @include forPhoneOnly() {
+                  font-size: 21px;
+                }
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 1.33;
+                letter-spacing: 0.01em;
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: none;
+                text-transform: uppercase;
+                animation-duration: 0.15s;
+                transition: all 0.15s linear;
+                cursor: pointer;
+              }
+              &__span:hover {
+                color: #ff931e;
+              }
+            }
+          }
+        }
+        &__div {
+          &__a {
+            display: inline-block;
+            height: 56px;
+            padding: 0 90px 0 24px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 56px;
+            color: #fff;
+            text-decoration: none;
+            background-image: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg);
+            background-repeat: no-repeat;
+            background-position: calc(100% - 24px) 50%;
+            box-shadow: inset 0 0 0 3px #dfe4eb;
+            border-radius: 12px;
+            animation-duration: 0.15s;
+            transition: all 0.15s linear;
+          }
+          &__a:hover {
+            background-image: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg);
+            background-repeat: no-repeat;
+            background-position: calc(100% - 20px) 50%;
+            box-shadow: inset 0 0 0 3px #ff931e;
+          }
+        }
+      }
+      &__wrapper {
+        &__ul {
+          display: none;
+          &__li {
+            @include forPhoneOnly() {
+              padding: 0 0 20px;
+            }
+            padding: 0 0 48px;
+            &__span {
+              @include forPhoneOnly() {
+                padding: 0 0 4px;
+                font-size: 14px;
+              }
+              display: block;
+              padding: 0 0 12px;
+              font-size: 18px;
+              line-height: 1.45;
+              color: rgba(255, 255, 255, 0.6);
+            }
+            &__p {
+              @include forPhoneOnly() {
+                font-size: 16px;
+              }
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 1.54;
+              color: #fff;
+            }
+            &__a {
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__last {
+    @include forPhoneOnly() {
+      display: block;
+      padding: 40px 20px 0;
+      text-align: center;
+    }
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 40px 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    &__div {
+      @include forPhoneOnly() {
+        justify-content: center;
+      }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: center;
+      &__p {
+        padding: 0 10px 0 0;
+        font-size: 12px;
+        line-height: 2.67;
+        color: #fff;
+      }
+      &__a {
+        display: inline-block;
+        padding: 0 0 0 30px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 2.67;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+      }
+      &__a::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(https://www.simbrella.com/site/templates/img/jis_logo.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        position: absolute;
+        left: 0;
+        top: calc(50% - 10px);
+      }
+    }
+    &__copyright {
+      @include forPhoneOnly() {
+        width: 100%;
+        padding: 10px 0 0;
+        font-size: 14px;
+      }
+      width: calc(100% - 360px);
+      font-size: 16px;
+      line-height: 1.5;
+      color: #999;
+    }
+  }
+}
+.footer__section__div__header__nav__ul__li__span.is-active {
+  color: #ff931e;
+}
+.footer__section__div__wrapper__ul.is-active {
+  display: block;
+}

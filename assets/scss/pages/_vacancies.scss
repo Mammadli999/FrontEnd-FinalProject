@@ -1,0 +1,156 @@
+.vacancies-header {
+  padding: 120px 0 40px;
+  background-color: #fff;
+  &__content {
+    @include containerStyle();
+    @include flexbox(center, space-between);
+    &__text {
+      width: calc(45% - 40px);
+      &__h1 {
+        padding-bottom: 32px;
+        font-size: 32px;
+        line-height: 1.29;
+        font-weight: bold;
+        letter-spacing: 0.01em;
+        color: #222;
+      }
+      &__p {
+        padding-bottom: 20px;
+        font-size: 18px;
+        line-height: 1.56;
+        color: #5f6773;
+        &__link {
+          color: #0e80e5;
+        }
+      }
+    }
+    &__image-wrapper {
+      width: auto;
+      &__img {
+        width: 460px;
+      }
+    }
+  }
+}
+
+.vacancy-types {
+  padding: 100px 0;
+  background: #f6f8fe;
+  &__wrapper {
+    @include containerStyle();
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 30px;
+    grid-auto-rows: 1fr;
+    &__box {
+      position: relative;
+      @include flexbox(center, center);
+      padding: 40px 20px;
+      background: #fff;
+      border: 1px solid #ff931e;
+      border-radius: 4px;
+      text-align: center;
+      transition: background-color 0.15s linear;
+      &:hover {
+        background-color: #ff931e;
+      }
+      &:hover &__h3 {
+        color: #fff;
+      }
+      &__h3 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+        color: #222;
+        text-align: center;
+        transition: color 0.15s linear;
+      }
+      &__link {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+// @include underTabletOnly() {
+//   .vacancy-types {
+//     padding: 40px 0;
+//     &__wrapper {
+//       grid-gap: 20px 20px;
+//       &__box {
+//         padding: 30px 20px;
+//         &__h3 {
+//           font-size: 21px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@include forTabletOnly() {
+  .vacancies-header {
+    &__content {
+      display: block;
+      &__text {
+        width: 100%;
+        &__h1 {
+          font-size: 27px;
+        }
+      }
+      &__image-wrapper {
+        display: none;
+      }
+    }
+  }
+  .vacancy-types {
+    padding: 40px 0;
+    &__wrapper {
+      grid-gap: 20px 20px;
+      grid-template-columns: 1fr;
+      &__box {
+        padding: 30px 20px;
+        &__h3 {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}
+
+// @include underSmallOnly() {
+//   .vacancies-header {
+//     &__content {
+//       display: block;
+//       &__text {
+//         width: 100%;
+//         &__h1 {
+//           padding: 0;
+//           font-size: 24px;
+//         }
+//       }
+//       &__image-wrapper {
+//         display: none;
+//       }
+//     }
+//   }
+//   .vacancy-types {
+//     padding: 20px 0;
+//     &__wrapper {
+//       grid-gap: 20px 20px;
+//       grid-template-columns: 1fr;
+//       &__box {
+//         padding: 20px 20px;
+//         &__h3 {
+//           font-size: 18px;
+//         }
+//       }
+//     }
+//   }
+// }
